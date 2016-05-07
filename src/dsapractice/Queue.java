@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Implementing queue with two stacks and their functions
  */
 package dsapractice;
 
@@ -28,9 +26,11 @@ public class Queue {
         while(!top.isEmpty()){
             bottom.push(top.pop());
         }
+        size++;
     }
     
     int dequeue(){
+        size--;
         return bottom.isEmpty()? null: bottom.pop();
     }
 }
